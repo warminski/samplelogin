@@ -3,6 +3,11 @@
         <div class="pure-u-1-2 l-box">
             <h3>Login</h3>
             <hr>
+            <?php if (session()->get('success')): ?>
+                <div class="success">
+                    <?=session()->get('success')?>
+                </div>
+            <?php endif; ?>
             <form class="pure-form pure-form-aligned" action="/" method="post">
                 <fieldset>
                     <div class="pure-control-group">

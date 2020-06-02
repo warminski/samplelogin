@@ -8,28 +8,35 @@
                 <fieldset>
                     <div class="pure-control-group">
                         <label for="firstname">First name</label>
-                        <input type="text" id="firstname" placeholder="First name"
-                               valaue="<? set_value('firstname') ?>"
+                        <input type="text" name='firstname' id="firstname" placeholder="First name"
+                               value="<?= set_value('firstname') ?>"/>
                     </div>
                     <div class="pure-control-group">
                         <label for="lastname">Last name</label>
-                        <input type="text" id="lastname" placeholder="Last name"
-                               valaue="<? set_value('lastname') ?>"
+                        <input type="text" name="lastname" id="lastname" placeholder="Last name"
+                               value="<?= set_value('lastname') ?>"/>
                     </div>
 
                     <div class="pure-control-group">
-                        <label for="aligned-email">Email adress</label>
-                        <input type="email" id="aligned-email" placeholder="Email adress"
-                               valaue="<? set_value('email') ?>"
+                        <label for="email">Email adress</label>
+                        <input type="email" name="email" id="email" placeholder="Email adress"
+                               value="<?= set_value('email') ?>">
                     </div>
                     <div class="pure-control-group">
-                        <label for="aligned-password">Password</label>
-                        <input type="password" id="aligned-password" placeholder="Password" name="password" value=""/>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="Password" name="password" value=""/>
                     </div>
                     <div class="pure-control-group">
-                        <label for="aligned-password_confirm">Confirm Password</label>
-                        <input type="password" id="aligned-password_confirm" placeholder="Password" name="password_confirm" value=""/>
+                        <label for="password_confirm">Confirm Password</label>
+                        <input type="password" name="password_confirm" id="password_confirm" placeholder="Password" name="password_confirm" value=""/>
                     </div>
+                    <?php if (isset($validation)): ?>
+                        <div class="pure-u-1 alert ">
+                            <div class="errors" role="alert">
+                                <?= $validation->listErrors() ?>
+                            </div>
+                        </div>
+                    <?php endif; ?>
                     <button type="submit" class="pure-button pure-button-primary">Register</button>
                     <div class="pure-g register">
                         <div class="pure-u-2-3">

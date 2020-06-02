@@ -31,5 +31,10 @@ body{
 
 }
 .registerfield{
-    height: 30em;
+    height: 32em;
 }
+.alert{
+    background-color: #FF6670;
+    color: #7E100A;
+}
+
