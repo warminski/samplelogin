@@ -2,6 +2,13 @@ body{
     background-color: #31708f;
 
 }
+.pure-menu-selected{
+    color:white;
+}
+.message{
+    margin-top: 50px;
+    background-color: white;
+}
 .pure-g{
     box-sizing: border-box;
     margin-top: 1em;
@@ -37,4 +44,13 @@ body{
     background-color: #FF6670;
     color: #7E100A;
 }
+.pure-button{
+    margin-top: 5px;
+}
+.errors li{
+    list-style:none;
+    width: 100%;
+    text-align: center;
+}
+
 

@@ -11,14 +11,20 @@
             <form class="pure-form pure-form-aligned" action="/" method="post">
                 <fieldset>
                     <div class="pure-control-group">
-                        <label for="aligned-email">Email adress</label>
-                        <input type="email" id="aligned-email" placeholder="Email adress"
-                               valaue="<? set_value('email') ?>"
+                        <label for="email">Email adress</label>
+                        <input type="text"  name="email" placeholder="Email adress" id="email" value="<?= set_value('email') ?>">
                     </div>
                     <div class="pure-control-group">
-                        <label for="aligned-password">Password</label>
-                        <input type="password" id="aligned-password" placeholder="Password" name="password" value=""/>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="Password" name="password" value=""/>
                     </div>
+                    <?php if (isset($validation)): ?>
+                        <div class="pure-u-1 alert ">
+                            <div class="errors" role="alert">
+                                <?= $validation->listErrors() ?>
+                            </div>
+                        </div>
+                    <?php endif; ?>
                     <button type="submit" class="pure-button pure-button-primary">Login</button>
                     <div class="pure-g register">
                         <div class="pure-u-2-3">
